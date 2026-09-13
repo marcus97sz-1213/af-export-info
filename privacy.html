@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — AF Data Export</title>
+  <style>
+    body {
+      max-width: 760px;
+      margin: 60px auto;
+      padding: 0 24px;
+      font-family: system-ui, sans-serif;
+      line-height: 1.7;
+      color: #222;
+    }
+    a { color: #5145cd; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p>AF Data Export · Updated 13 September 2026</p>
+
+  <h2>Purpose</h2>
+  <p>
+    AF Data Export is maintained by Marcus for personal gym
+    occupancy analysis. It exports database readings to Google
+    Drive for use in tools such as Power BI.
+  </p>
+
+  <h2>Data accessed and used</h2>
+  <p>
+    The exporter processes gym identifiers, timestamps and
+    estimated occupancy counts stored in Cloudflare D1.
+    The exported records do not contain individual gym
+    members' names or membership details.
+  </p>
+  <p>
+    Google Drive access uses the drive.file permission.
+    The application creates its export folder, lists relevant
+    file metadata, and uploads or updates its Parquet files.
+    It does not request unrestricted access to Google Drive.
+  </p>
+
+  <h2>Storage and processing</h2>
+  <p>
+    Source readings are stored in Cloudflare D1. Export jobs
+    run on GitHub Actions, where data is processed temporarily.
+    Exported files are stored in the owner's Google Drive and
+    may be synced to the owner's computer.
+  </p>
+  <p>
+    Google OAuth credentials and the Cloudflare API token are
+    stored as GitHub Actions secrets for the private exporter
+    repository. Credentials must not be committed to repository
+    files or included in application logs.
+  </p>
+
+  <h2>Sharing</h2>
+  <p>
+    Data is processed through Cloudflare, GitHub and Google
+    as needed to operate the workflow. The application does
+    not intentionally publish exported files, sell Google
+    user data, or use it for advertising or AI model training.
+    Files remain subject to the owner's Drive sharing settings.
+  </p>
+
+  <h2>Retention and deletion</h2>
+  <p>
+    Database readings and exported files remain until the
+    owner deletes them or configures a retention policy.
+    Deleting a Drive export does not delete the original
+    database readings. An active export job may recreate
+    deleted exports.
+  </p>
+  <p>
+    To stop processing, disable the GitHub Actions workflow.
+    Google access can be revoked through the Google Account
+    connections page. Revoking access does not automatically
+    delete existing files, database records or local copies.
+  </p>
+
+  <h2>Contact and changes</h2>
+  <p>
+    Contact the developer using the support email displayed
+    on the application's Google consent screen. Changes to
+    this policy will be published on this page with an updated
+    date.
+  </p>
+
+  <p><a href="index.html">Back to AF Data Export</a></p>
+</body>
+</html>
